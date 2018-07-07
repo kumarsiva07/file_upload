@@ -22,3 +22,7 @@ Value: select your file
 
 GET http://localhost:3000/users/1/images
 
+
+
+We can controll file in https://github.com/kumarsiva07/file_upload/blob/master/app/app/uploaders/image_uploader.rb
+file type, storage, size, image sizes, etc
