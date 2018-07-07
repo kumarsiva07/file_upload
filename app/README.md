@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+`cd app && bundle install`
 
-* Ruby version
+`rake db:setup && rake db:migrate && rails s`
 
-* System dependencies
+Open postman
 
-* Configuration
+POST   http://localhost:3000/users/ 
 
-* Database creation
+{"name": "name", "email": "kumarsiva0707@gmail.com"}
 
-* Database initialization
 
-* How to run the test suite
+POST  http://localhost:3000/users/1/images
 
-* Services (job queues, cache servers, search engines, etc.)
+send image => file
 
-* Deployment instructions
+GET http://localhost:3000/users/1/images
 
-* ...
