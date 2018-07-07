@@ -14,7 +14,11 @@ POST   http://localhost:3000/users/
 
 POST  http://localhost:3000/users/1/images
 
-send image => file
+send image => file  
+
+Type : Form-data 
+Key : image
+Value: select your file
 
 GET http://localhost:3000/users/1/images
 
