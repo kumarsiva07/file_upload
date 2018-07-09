@@ -3,24 +3,24 @@ class ImagesController < ApplicationController
 
   # GET /images
   def index
-    @images = Image.all
+    @images = Image.all(params[:user_id], params[:options] || {})
 
     render json: @images
   end
 
   # GET /images/1
   def show
-    render json: @image
+    send_file "./uploads/#{@image.id}/#{@image.file_name}", type: @image.content_type, disposition: 'inline'
   end
 
   # POST /images
   def create
     @image = Image.new(image_params)
 
-    if @image.save
+    if @image.upload
       render json: @image, status: :created
     else
-      render json: @image.errors, status: :unprocessable_entity
+      render json: {status: :unprocessable_entity}
     end
   end
 

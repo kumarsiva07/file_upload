@@ -6,3 +6,6 @@
 #     https: false
 #   )
 # end
+DatabaseConfig = YAML.load_file(File.join(Rails.root, 'config', 'database.yml'))[Rails.env]
+
+Mysql::Record
